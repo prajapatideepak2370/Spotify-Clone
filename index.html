@@ -86,8 +86,8 @@
             </div>
             
             <button class="eng"><i class="fa-solid fa-globe"></i>English</button>
-            
-        </div>
+    
+        </div>        
 <!-- MAIN cONTENT (SONGS ETC) -->
         <div class="main-content">
             <div class="cards">
@@ -259,21 +259,50 @@
                           
                 <div class="footer">
                     <div class="line"></div>
+                    <div class="link_card">
+                        <div class="links"></div>
+                        <div class="links"></div>
+                        <div class="links"></div>
+                        <div class="links"></div>
+                    </div>
                 </div>
                 
             </div>
         </div>
         <div class="music-player">
-            <div class="album">
-                <img src="/Assests/card11img.png" alt="">
-                <div class="song-title"></div>
-                <div class="song-artist"></div>
+            <div class="player-left">
+                <div class="album">
+                    <img id="player-album" src="Assests/card11img.png" alt="" />
+                    <div class="song-meta">
+                        <div id="song-title" class="song-title">Dooron Dooron</div>
+                        <div id="song-artist" class="song-artist">Paresh Pahuja</div>
+                    </div>
+                </div>
             </div>
-            <div class="player"></div>
-            <div class="control"></div>
+            <div class="player-center">
+                <div class="player-control">
+                    <img id="btn-shuffle" src="./Assests/player_icon1.png" class="player-control-icon" alt="shuffle">
+                    <img id="btn-prev" src="./Assests/player_icon2.png" class="player-control-icon" alt="prev">
+                    <img id="btn-play" src="./Assests/player_icon3.png" class="player-control-icon" alt="play">
+                    <img id="btn-next" src="./Assests/player_icon4.png" class="player-control-icon" alt="next">
+                    <img id="btn-repeat" src="./Assests/player_icon5.png" class="player-control-icon" alt="repeat">
+                </div>
+                <div class="playback-bar">
+                    <audio id="audio" crossorigin="anonymous"></audio>
+                    <span class="curr-time">00:00</span>
+                    <input id="seek" type="range" min="0" max="100" value="0">
+                    <span class="tot-time">03:40</span>
+                </div>
+            </div>
+            <div class="player-right controls">
+                <button class="icon-btn" title="Like"><i class="fa-regular fa-heart"></i></button>
+                <button class="icon-btn" title="Queue"><i class="fa-solid fa-list"></i></button>
+                <button class="icon-btn" title="Devices"><i class="fa-solid fa-computer"></i></button>
+                <button class="icon-btn" title="Devices"><i class="fa-solid fa-volume-high"></i></button>
+                <div class="volume">
+                    <input id="volume" type="range" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
         </div>
-   </div>
-</nav>
-<script src="web.js"></script>
 </body>
 </html>
